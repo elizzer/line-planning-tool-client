@@ -56,7 +56,7 @@ export default async function Page({
         </span>
         <div className="ml-4 card-grid">
           {data.categories && data.categories.map((e,i)=>{
-            return (<Card data={e}></Card>)
+            return (<Card data={e} key={i}></Card>)
           })}
         </div>
       </div>
@@ -66,7 +66,7 @@ export default async function Page({
         </span>
         <div className="ml-4 card-grid">
           {data.SPLs && data.SPLs.map((e,i)=>{
-            return (<Card data={e}></Card>)
+            return (<Card data={e} key={i}></Card>)
           })}
         </div>
       </div>
