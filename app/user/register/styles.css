@@ -1,0 +1,13 @@
+@import url("../../globals.css");
+
+.form-container{
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.error{
+    color: red;
+    font-size: small;
+}

@@ -1,0 +1,9 @@
+@import url("../../globals.css");
+
+.form-container{
+    background-color: var(--accent);
+    color: var(--text);
+    padding: 2rem;
+    border-radius: 15px;
+}
+
