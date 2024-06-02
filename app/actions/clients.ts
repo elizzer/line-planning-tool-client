@@ -136,3 +136,28 @@ export async function editClient(deleted:DeletedMembers,clientData:FormData,clie
     }
 
 }
+
+export async function deleteClient(id){
+    const clientResponse = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/clients/${id}`,{
+        method:"DELETE",
+        headers:{
+            "content-type":"application/json",
+            "authorization":`Bearer ${await getToken()}`
+        },
+        cache:"no-cache"
+    })
+    
+    if(clientResponse.status===401){
+        redirect("/user/login")
+    }
+
+    const clientResponseJson=await clientResponse.json()
+    console.log(clientResponseJson)
+    if(!clientResponseJson.error){
+        console.log('Deletion success')
+        redirect("/dashboard/clients")
+        
+    }else{
+        return clientResponseJson.message
+    }
+}
