@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 
 import LineForm from '../LineForm';
 import { createLine } from '@/app/actions/line';
+import { redirect } from 'next/navigation';
 
 export default function CreateForm({factoryList,factoryId}) {
     const [formError,setFormError]=useState("")
@@ -13,8 +14,9 @@ export default function CreateForm({factoryList,factoryId}) {
       const res = await createLine(formdata)
       console.log('[+]Form submit response ',res)
       if(res){
-
         setFormError(res)
+      }else{
+        // redirect()
       }
     }
     console.log('[+]Factory id',factoryId)

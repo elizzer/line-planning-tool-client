@@ -157,3 +157,71 @@ body {
   background-color: black;
   margin: 10px auto;
 }
+
+
+/* styles.css */
+
+/* Utility classes for the card component */
+.card {
+  padding: 1rem; /* p-4 in Tailwind */
+  background-color: white; /* bg-white in Tailwind */
+  border-radius: 0.5rem; /* rounded-lg in Tailwind */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* shadow-md in Tailwind */
+  display: flex; /* flex in Tailwind */
+  justify-content: center; /* justify-center in Tailwind */
+  align-items: center; /* items-center in Tailwind */
+  cursor: pointer; /* cursor-pointer in Tailwind */
+  transition: background-color 0.2s; /* smooth hover transition */
+}
+
+.card:hover {
+  background-color: #f7fafc; /* bg-gray-100 in Tailwind */
+}
+
+.card-title {
+  font-size: 1.125rem; /* text-lg in Tailwind */
+  font-weight: 600; /* font-semibold in Tailwind */
+}
+
+/* Utility classes for the grid layout */
+.grid-layout {
+  display: grid; /* grid in Tailwind */
+  gap: 1rem; /* gap-4 in Tailwind */
+}
+
+@media (min-width: 640px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr); /* sm:grid-cols-2 in Tailwind */
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 in Tailwind */
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-layout {
+    grid-template-columns: repeat(4, 1fr); /* lg:grid-cols-4 in Tailwind */
+  }
+}
+
+/* Utility classes for the metadata section */
+.metadata-container {
+  padding: 1rem; /* p-4 in Tailwind */
+  margin: 1rem 0; /* my-4 in Tailwind */
+  background-color: #f7fafc; /* bg-gray-100 in Tailwind */
+  border-radius: 0.5rem; /* rounded-lg in Tailwind */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06); /* shadow-sm in Tailwind */
+}
+
+.metadata-title {
+  font-size: 1.25rem; /* text-xl in Tailwind */
+  font-weight: 600; /* font-semibold in Tailwind */
+  margin-bottom: 0.5rem; /* mb-2 in Tailwind */
+}
+
+.metadata-text {
+  color: #4a5568; /* text-gray-700 in Tailwind */
+}

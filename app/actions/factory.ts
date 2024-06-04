@@ -104,3 +104,26 @@ export async function updateFactory(factoryData:Factory,id:String){
         return body.message
     }
 }
+
+
+export async function deleteFactory(id:string){
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URI}/factory/${id}`,{
+        method:"DELETE",
+        headers:{
+            "content-type":"application/json",
+            "authorization":`Bearer ${await getToken()}`
+        },
+        cache:"no-cache"
+    })
+    if(res.status===401){
+        console.log("Unauthorized")
+        redirect("/user/login")
+    }
+    const body=await res.json()
+    if(!body.error){
+        redirect("/dashboard/factory")
+    }else{
+    
+        return body.message
+    }
+}

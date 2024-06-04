@@ -3,7 +3,7 @@ import React from "react";
 import { MdEdit } from "react-icons/md";
 
 import { getClient } from "@/app/actions/clients";
-import { MdDelete } from "react-icons/md";
+
 
 import Link from "next/link";
 import DeleteClient from "./DeleteClient";

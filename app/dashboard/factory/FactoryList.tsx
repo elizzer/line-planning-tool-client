@@ -9,7 +9,7 @@ interface FactoryCardProps {
   const FactoryCard: React.FC<FactoryCardProps> = ({ name, id }) => {
     return (
       <Link href={`/dashboard/factory/${id}`}>
-        <div className='p-2 bg-accent cursor-pointer rounded-lg flex justify-center items-center'>
+        <div className='card'>
           {name}
         </div>
       </Link>
