@@ -122,16 +122,16 @@ import Link from "next/link";
             key={i}
             id={e._id}
             name={e.name}
-            clientName={e.clientID.name}
-            categoryName={e.categoryID.name}
-            merchantName={e.merchantID.name}
-            SPLName={e.SPLID.name}
-            IMAN={e.IMAN}
-            model={e.model}
-            totalPieces={e.totalPieces}
-            startDate={e.startDate}
-            endDate={e.endDate}
-            assignedPieces={e.assignedPieces}
+            clientName={e.clientID?.name}
+            categoryName={e?.categoryID?.name}
+            merchantName={e?.merchantID?.name}
+            SPLName={e.SPLID?.name}
+            IMAN={e?.IMAN}
+            model={e?.model}
+            totalPieces={e?.totalPieces}
+            startDate={e?.startDate}
+            endDate={e?.endDate}
+            assignedPieces={e?.assignedPieces}
           />
         ))}
       </div>

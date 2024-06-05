@@ -64,11 +64,12 @@ export default function CreateJobAssignment({
         setJobData(res.data);
         let seljob = res.data.find((job: any) => job._id === formData.jobID);
         if (seljob) {
+          console.log("Assigning selected job",seljob)
           setSelectedJob(seljob);
           setFormData((prev) => ({
             ...prev,
-            startDate: seljob.startDate.split("T")[0],
-            endDate: seljob.endDate.split("T")[0],
+            startDate: seljob.startDate?.split("T")[0],
+            endDate: seljob.endDate?.split("T")[0],
           }));
         }
         console.log("[+]Selected job dets ", seljob);

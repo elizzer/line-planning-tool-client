@@ -35,6 +35,7 @@ export async function getFactories(){
 }
 
 export async function getFactory(factoryId:string){
+    console.log("Fetching factories")
     const res = await fetch (`${process.env.NEXT_PUBLIC_SERVER_URI}/factory/${factoryId}`,{
         method:"GET",
         headers:{

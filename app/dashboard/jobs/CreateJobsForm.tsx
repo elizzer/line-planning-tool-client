@@ -61,9 +61,9 @@ export default function CreateJobsForm({ data, submit }) {
       setCategoryData(_clientTemp[0]?.categories);
       setSPLData(_clientTemp[0]?.SPLs);
       setFormData((prev) => {
-        prev.clientID = _clientTemp[0]._id;
-        prev.categoryID = _clientTemp[0]?.categories[0]._id;
-        prev.SPLID = _clientTemp[0]?.SPLs[0]._id;
+        prev.clientID = _clientTemp[0]?._id;
+        prev.categoryID = _clientTemp[0]?.categories[0]?._id;
+        prev.SPLID = _clientTemp[0]?.SPLs[0]?._id;
         return { ...prev };
       });
       console.log("[=]Client data", res);
@@ -72,7 +72,7 @@ export default function CreateJobsForm({ data, submit }) {
       setMerchantData(res.data);
       console.log("[=]Merchant data ", res.data);
       setFormData(prev=>{
-        prev.merchantID=res.data[0]._id
+        prev.merchantID=res.data[0]?._id
         return {...prev}
       })
     });

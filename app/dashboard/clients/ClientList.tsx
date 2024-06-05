@@ -7,7 +7,7 @@ import { FaPlus } from "react-icons/fa6";
 function ClientCard({name,metadata,id}){
     return (
         <Link href={`/dashboard/clients/${id}`}>
-            <div className='p-2 bg-accent cursor-pointer  rounded-lg flex justify-center items-center'>
+            <div className='card'>
                 {name}
             </div>
         </Link>
